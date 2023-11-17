@@ -1,0 +1,25 @@
+﻿@model List<MyElearningProject.DAL.Entities.Course>
+<div class="tab-pane" id="settings" role="tabpanel">
+    <div class="card-block">
+        @foreach (var item in Model)
+        {
+            <div class="sl-item">
+                <div class="sl-left"></div>
+                <div class="sl-right">
+                    <div>
+                        <a href="#" class="link">@item.Title</a> <span class="sl-date">@item.Duration Dakika</span>
+                        
+                        <div class="m-t-20 row">
+                            <div class="col-md-3 col-xs-12"><img src="@item.ImageUrl" alt="user" class="img-responsive radius"></div>
+                            <div class="col-md-9 col-xs-12">
+                                <p> Açıklama yazısı . </p> <a href="/InstructorAnalysis/AddCourseVideo/@item.CourseID" class="btn btn-success"> Kursa Video Ekle</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <hr>
+        }
+    </div>
+</div>

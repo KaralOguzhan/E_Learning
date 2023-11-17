@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+    
+
+<div class="row">
+    <div class="col-12">
+        <div class="card" style="width: 400px;">
+            <div class="card-block" >
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="@ViewBag.ImgUrl" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@ViewBag.name</h5>
+                        <p class="card-text"></p>
+
+                        <h4> @ViewBag.mail</h4>
+
+                    </div>
+                </div>
+
+
+                <a href="/Profile/UpdateProfile/@ViewBag.id" class="btn btn-primary">Profili Düzenle</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+

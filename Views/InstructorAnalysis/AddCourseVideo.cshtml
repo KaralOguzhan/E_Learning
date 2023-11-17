@@ -1,0 +1,28 @@
+﻿@model MyElearningProject.DAL.Entities.CourseLink
+
+@{
+    ViewBag.Title = "AddCourseVideo";
+    Layout = "~/Views/InstructorLayout/Index.cshtml";
+}
+
+
+
+<h2>Kursa Yeni Video Ekle</h2>
+
+<form method="post">
+    <input value="@ViewBag.CourseID" type="text" name="CourseID" />
+    <br />
+    <br />
+    <label>Ders Başlığını giriniz</label>
+    <br />
+    <input name="CourseVideoTitle" type="text" class="form-control" />
+
+    <br />
+    <label>Ders URL'sini giriniz</label>
+    <br />
+    <input name="CourseUrl" type="text" class="form-control" />
+    <br />
+    <br />
+    <button class="btn btn-outline-primary"> Video Ekle</button>
+
+</form>

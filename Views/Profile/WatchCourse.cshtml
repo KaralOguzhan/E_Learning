@@ -1,0 +1,18 @@
+﻿@model List<MyElearningProject.DAL.Entities.CourseLink>
+
+@{
+    ViewBag.Title = "WatchCourse";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<h2>@ViewBag.C</h2>
+
+@foreach(var item in Model)
+            {
+                if(@ViewBag.course == item.CourseID)
+                {
+        <br />
+                    <h1>@item.CourseVideoTitle</h1><br />
+                    <iframe src="@item.CourseUrl" width="500px" height="300px" ></iframe><br />
+                }
+            }

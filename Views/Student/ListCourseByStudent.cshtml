@@ -1,0 +1,32 @@
+﻿
+@model List<MyElearningProject.DAL.Entities.Process>
+
+@{
+    ViewBag.Title = "ListCourseByStudent";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>ListCourseByStudent</h2>
+
+
+
+<h5>Kurs Listeniz</h5>
+@foreach (var item in Model)
+{
+    
+
+
+    <div class="card" style="width: 25rem;">
+        <img class="card-img-bottom" src="@item.Course.ImageUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">  @item.Course.Title</h5>
+            <p class="card-text">@item.Course.Duration Dakika</p>
+            <row class="mr-5">
+                <a href="/Profile/WatchCourse/@item.CourseID" class="btn btn-outline-primary">İzle</a>
+                <a href="/Profile/RateCourse/@item.CourseID" class="btn btn-outline-success">Puan Ver</a>
+                <a href="/Profile/CommentCourse/@item.CourseID" class="btn btn-outline-warning">Yorum Yap</a>
+            </row>
+
+        </div>
+    </div>
+}

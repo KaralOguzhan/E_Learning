@@ -1,0 +1,20 @@
+﻿namespace MyElearningProject.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class mig_up_student : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.Students", "Username", c => c.String());
+            AddColumn("dbo.Students", "ImgUrl", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("dbo.Students", "ImgUrl");
+            DropColumn("dbo.Students", "Username");
+        }
+    }
+}

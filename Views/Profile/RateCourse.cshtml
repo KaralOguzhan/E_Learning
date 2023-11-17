@@ -1,0 +1,16 @@
+﻿﻿@model MyElearningProject.DAL.Entities.Review
+@{
+    ViewBag.Title = "RateCourse";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+
+
+<form method="post">
+    <h2>@ViewBag.courseName kursunu değelerlendir!</h2>
+    <br />
+    <input type="hidden" value="@ViewBag.v" name="CourseID" />   <br />
+    <input name="ReviewScore" class="form-control" />
+    <button class="btn btn-outline-success"> Ekle</button>
+
+</form>

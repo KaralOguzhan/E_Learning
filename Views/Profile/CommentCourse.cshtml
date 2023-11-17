@@ -1,0 +1,14 @@
+﻿@model MyElearningProject.DAL.Entities.Comment
+@{
+    ViewBag.Title = "CommentCourse";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<form method="post">
+    <h2>@ViewBag.courseName kursunu değerlendir</h2>
+    <br />
+    <input type="hidden" value="@ViewBag.v" name="CourseID" />   <br />
+    <input name="CommentText" class="form-control" />
+    <button class="btn btn-outline-success"> Ekle</button>
+
+</form>

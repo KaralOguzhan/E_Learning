@@ -1,0 +1,21 @@
+﻿@model MyElearningProject.DAL.Entities.QuadLink
+@{
+    ViewBag.Title = "updateQuads";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Banner Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Kategori ID</label>
+    @Html.TextBoxFor(x => x.quadLinkID, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Ikon, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Bannerı Güncelle</button>
+</form>
+
